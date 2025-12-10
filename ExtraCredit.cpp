@@ -37,8 +37,8 @@ int main(){
   double highest = 0;
   for (auto &p : movies) {
       double sum = 0;
-      for (int r : psecond) sum += r;
-      double avg = sum / psecond.size();
+      for (int r : p.second) sum += r;
+      double avg = sum / p.second.size();
       if (avg > highest) highest = avg;
 
   cout << "Highest average rating: " << highest << "\n";
