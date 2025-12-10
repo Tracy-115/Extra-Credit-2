@@ -15,16 +15,18 @@ int main(){
       movies[name].push_back(rating);
   }
   for (auto &p : movies) {
-      cout << pfirst << ": ";
-      for (int r : psecond) cout << r << " \n";
+      cout << p.first << ": ";
+      for (int r : p.second) cout << r << " \n";
   }
   int movieCount = 0;
   for (auto &p : movies) {
       movieCount++;
       cout << p.first << ": ";
-  for (int r : p.second) cout << r << " ";
-  double total = 0;
-  for (int r : p.second) total += r;
-
-  
+      for (int r : p.second) cout << r << " ";
+      double total = 0;
+      for (int r : p.second) total += r;
+      double average = total / p.second.size();
+      cout << "Average=" << average;
+  }
+  cout << "Total movies: " << movieCount << "\n\n";
 }
