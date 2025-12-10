@@ -29,4 +29,11 @@ int main(){
       cout << "Average=" << average;
   }
   cout << "Total movies: " << movieCount << "\n\n";
+
+  double highest = 0;
+  for (auto &p : movies) {
+      double sum = 0;
+      for (int r : psecond) sum += r;
+      double avg = sum / psecond.size();
+      if (avg > highest) highest = avg;
 }
