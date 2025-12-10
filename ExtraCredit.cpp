@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
   map<string, vector<int>> movies;
-  ifstream inFile("210-xc2-FA25.txt"); //lab 15 Movie Class
+  ifstream inFile("movies.txt"); //lab 15 Movie Class
   if (!inFile) {
         cerr << "Error: could not open" << endl;
         return 1;
